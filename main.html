@@ -1,16 +1,84 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> <!-- Add this line to link to your custom CSS file -->
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <!-- Add your logo here -->
+            <img src="data:image/png;base64,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" alt="Logo" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="bootcampsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Bootcamps
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="bootcampsDropdown">
+                        <a class="dropdown-item" href="#">Popular Bootcamps</a>
+                        <a class="dropdown-item" href="#">Bootcamp Developers</a>
+                        <a class="dropdown-item" href="#">Bootcamp Financing</a>
+                        <a class="dropdown-item" href="#">Bootcamp Grads and Alumni</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="codingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Coding
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="codingDropdown">
+                        <a class="dropdown-item" href="#">Coding tools</a>
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">JS</a>
+                        <a class="dropdown-item" href="#">PYTHON</a>
+                        <a class="dropdown-item" href="#">Ruby</a>
+                        <a class="dropdown-item" href="#">C++</a>
+                        <a class="dropdown-item" href="#">Java</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="careerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Career Resources
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="careerDropdown">
+                        <a class="dropdown-item" href="#">Career Advice</a>
+                        <a class="dropdown-item" href="#">Interviews</a>
+                        <a class="dropdown-item" href="#">Tech Cities</a>
+                        <a class="dropdown-item" href="#">Tech Salaries</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="techFieldsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tech Fields
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="techFieldsDropdown">
+                        <a class="dropdown-item" href="#">Web Design</a>
+                        <a class="dropdown-item" href="#">Web Development</a>
+                        <a class="dropdown-item" href="#">Software Engineering</a>
+                        <a class="dropdown-item" href="#">Data Science</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News & Commentary</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-
 </html>

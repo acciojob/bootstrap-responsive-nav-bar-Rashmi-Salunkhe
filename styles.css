@@ -1,1 +1,63 @@
-/*  your css code here. If applicable */
+
+.navbar {
+  background-color: #ADD8E6; /* Light blue color */
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.navbar-brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #337ab7;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  border: 1px solid #ccc; /* Border around dropdown menu */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  border: 1px solid #f7f7f7; /* Center border */
+}
+
+.dropdown-item:hover {
+  background-color: #f7f7f7;
+  color: #337ab7;
+}
+
+.dropdown-item:second-child {
+  border-bottom: 1px solid #f7f7f7;
+}
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+/* Active dropdown item styles */
+.dropdown-item.active {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.dropdown-item.active:hover {
+  background-color: #337ab7;
+  color: #fff;
+}
